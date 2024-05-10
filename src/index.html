@@ -428,8 +428,19 @@
       <div class="main__sidebar">
         <div class="sidebar">
           <div class="promo">
-            <input type="text" class="promo-input" placeholder="Введите промокод">
-            <button class="promo-btn">Ввести</button>
+            <div class="promo__form">
+              <input type="text" class="promo__input" placeholder="Введите промокод">
+              <button class="promo__btn">Ввести</button>
+            </div>
+            <div class="promo__text">
+              <div class="promo__code">
+                <div class="promo__code-descr">Активен промокод:</div>
+                <div class="promo__code-code">WEB-ROMANS</div>
+                <div class="promo__code-info">Скидка 20% на все</div>
+              </div>
+              <button class="promo__remove" title="Отменить промокод" aria-label="Отменить промокод"></button>
+            </div>
+
           </div>
           <div class="cart">
             <div class="cart__title">Корзина</div>
@@ -475,7 +486,7 @@
               </li>
               <li class="cart__item">
                 <button class="cart__close" aria-label="Убрать из корзины"></button>
-                <div class="cart__item-title">Калифорния маки<span>(1/2 порции 4шт - 554гр)</span></div>
+                <div class="cart__item-title">Калифорния маки <span>(1/2 порции 4шт - 554гр)</span></div>
                 <div class="cart__item-descr">
                   <p>Крабовые палочки, </p>
                   <p>авокадо, огурец, майонез, </p>
@@ -504,8 +515,8 @@
                 Оформить заказ
               </button>
             </div>
+            <div class="cart__text visually-hidden">Ваша корзина пуста, выберите хоть что-нибудь</div>
           </div>
-
         </div>
     </main>
     @include('html/footer.html')

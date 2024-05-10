@@ -1,4 +1,7 @@
 .sidebar {
+  @include flex;
+  @include flex-column;
+  gap: vw(20px);
   position: sticky;
-  top: 10px;
+  top: vw(10px);
 }

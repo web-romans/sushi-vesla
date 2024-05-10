@@ -1,0 +1,128 @@
+.cart {
+  @include flex;
+  @include flex-column;
+
+  gap: vw(15px);
+  padding: vw(15px) vw(25px);
+  border: vw(1px) solid rgba(0, 0, 0, 0.05);
+  border-radius: vw(20px);
+  background-color: var(--color-white);
+
+  &__text {
+    font-weight: 500;
+    font-size: vw(16px);
+    color: var(--color-black);
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: vw(18px);
+    color: var(--color-black);
+  }
+
+  &__list {
+    @include flex;
+    @include flex-column;
+    gap: vw(10px);
+  }
+
+  &__item {
+    @include flex;
+    @include flex-column;
+    position: relative;
+    gap: vw(5px);
+    background-color: #f8f9fc;
+    padding: vw(10px);
+    border-radius: vw(10px);
+    transition: box-shadow 0.25s ease;
+
+    @include hover {
+      box-shadow:
+        vw(5px) vw(5px) vw(10px) 0 rgba(0, 0, 0, 0.1),
+        vw(-5px) vw(-5px) vw(5px) 0 #fff;
+
+      .cart__item-title {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: vw(18px);
+    color: var(--color-black);
+    transition: color 0.25s ease;
+
+    span {
+      font-weight: 500;
+      font-size: vw(10px);
+      white-space: nowrap;
+    }
+  }
+
+  &__item-descr {
+    p {
+      font-weight: 500;
+      font-size: vw(10px);
+    }
+  }
+
+  &__item-footer {
+    @include flex-center-between;
+    gap: vw(20px);
+  }
+
+  &__item-price {
+    font-weight: 700;
+    font-size: vw(18px);
+    color: var(--color-black);
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    top: vw(10px);
+    right: vw(10px);
+    width: vw(16px);
+    height: vw(16px);
+    background-color: rgba(0, 0, 0, 0.3);
+    mask-image: url("@img/icons/close.svg");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    transition: background-color 0.25s ease;
+    @include hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &__footer {
+    @include flex;
+    @include flex-column;
+    gap: vw(15px);
+    padding-top: vw(15px);
+    border-top: vw(2px) solid #e6e6e6;
+  }
+
+  &__footer-info {
+    @include flex-center-between;
+    gap: vw(10px);
+  }
+
+  &__footer-text {
+    font-weight: 500;
+    font-size: vw(20px);
+  }
+
+  &__footer-summ {
+    font-weight: 700;
+    font-size: vw(20px);
+  }
+
+  &__footer-btn {
+    @include flex-all-center;
+    gap: vw(5px);
+  }
+}

@@ -1,0 +1,89 @@
+.promo {
+  @include flex;
+  @include flex-column;
+  gap: vw(15px);
+
+  &__form {
+    @include flex-center-between;
+    position: relative;
+  }
+
+  &__text {
+    @include flex;
+    @include flex-column;
+    gap: vw(10px);
+    position: relative;
+  }
+  &__code {
+    @include flex;
+    @include flex-column;
+    gap: vw(10px);
+  }
+  &__code-descr {
+    font-weight: 700;
+    font-size: vw(12px);
+  }
+  &__code-code {
+    font-weight: 700;
+    font-size: vw(18px);
+    color: var(--color-primary);
+  }
+  &__code-info {
+    font-weight: 400;
+    font-size: vw(12px);
+  }
+  &__remove {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: vw(16px);
+    height: vw(16px);
+    mask-image: url("@img");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+
+    background-color: var(--color-primary);
+    mask-image: url("@img/icons/close.svg");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    cursor: pointer;
+    transition: opacity 0.25s ease;
+
+    @include hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__input {
+    @include input-reset;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: vw(14px);
+    color: var(--color-primary);
+    border: vw(2px) solid var(--color-primary);
+    padding: vw(10px) vw(150px) vw(10px) vw(15px);
+    border-radius: vw(10px);
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: vw(14px);
+      color: var(--color-primary);
+    }
+  }
+
+  &__btn {
+    @extend .btn;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: vw(135px);
+    height: 100%;
+    font-size: vw(16px);
+    padding: 0;
+    border-radius: vw(10px);
+  }
+}
