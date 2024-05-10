@@ -1,0 +1,286 @@
+/* stylelint-disable */
+@use "sass:math";
+
+$browser-context: 16; // Default
+$maxWidth: 1920;
+$maxWidthTablet: 1135;
+$maxWidthMobile: 767;
+$minWidth: 320;
+$containerWidth: 1110;
+
+@mixin adaptiveVw($property, $font) {
+  @media (min-width: 1135.1px) {
+    $vw-context: 1920 * 0.01 * 1px;
+    #{$property}: math.div($font, $vw-context) * 1vw;
+  }
+
+  @media (max-width: (1135px)) {
+    $vw-context: 1135 * 0.01 * 1px;
+    #{$property}: math.div($font, $vw-context) * 1vw;
+  }
+
+  @media (max-width: (600px)) {
+    $vw-context: 375 * 0.01 * 1px;
+    #{$property}: math.div($font, $vw-context) * 1vw;
+  }
+}
+
+@function vw($font) {
+  $vw-context: $maxWidth * 0.01 * 1px;
+  @return math.div($font, $vw-context) * 1vw;
+}
+
+@function vwt($font) {
+  $vw-context: $maxWidthTablet * 0.01 * 1px;
+  @return math.div($font, $vw-context) * 1vw;
+}
+
+@function vwm($font) {
+  $vw-context: $maxWidthMobile * 0.01 * 1px;
+  @return math.div($font, $vw-context) * 1vw;
+}
+
+@mixin box-shadow {
+  @extend %box-shadow;
+}
+
+@mixin flex {
+  @extend %flex;
+}
+
+@mixin inline-flex {
+  @extend %inline-flex;
+}
+
+@mixin flex-align-center {
+  @extend %flex-align-center;
+}
+
+@mixin flex-align-start {
+  @extend %flex-align-start;
+}
+
+@mixin flex-align-stretch {
+  @extend %flex-align-stretch;
+}
+
+@mixin flex-align-end {
+  @extend %flex-align-end;
+}
+
+@mixin flex-justify-end {
+  @extend %flex-justify-end;
+}
+
+@mixin flex-justify-between {
+  @extend %flex-justify-between;
+}
+
+@mixin flex-justify-center {
+  @extend %flex-justify-center;
+}
+
+@mixin flex-justify-start {
+  @extend %flex-justify-start;
+}
+
+@mixin flex-all-center {
+  @extend %flex-all-center;
+}
+
+@mixin flex-center-between {
+  @extend %flex-center-between;
+}
+
+@mixin flex-stretch-between {
+  @extend %flex-stretch-between;
+}
+
+@mixin flex-center-end {
+  @extend %flex-center-end;
+}
+
+@mixin flex-center-start {
+  @extend %flex-center-start;
+}
+
+@mixin flex-start-between {
+  @extend %flex-start-between;
+}
+
+@mixin flex-start-center {
+  @extend %flex-start-center;
+}
+
+@mixin flex-column {
+  @extend %flex-column;
+}
+
+@mixin flex-row {
+  @extend %flex-row;
+}
+
+@mixin flex-wrap {
+  @extend %flex-wrap;
+}
+
+@mixin flex-nowrap {
+  @extend %flex-nowrap;
+}
+
+@mixin dis-link {
+  @extend %dis-link;
+}
+
+@mixin btn-reset {
+  @extend %btn-reset;
+}
+
+@mixin list-reset {
+  @extend %list-reset;
+}
+
+@mixin input-reset {
+  @extend %input-reset;
+}
+
+@mixin visually-hidden {
+  @extend %visually-hidden;
+}
+
+@mixin text-decoration-none {
+  @extend %text-decoration-none;
+}
+
+@function rem($px) {
+  $result: math.div($px, $browser-context) + rem;
+  @return $result;
+}
+
+@function em($px) {
+  $result: math.div($px, $browser-context) + em;
+  @return $result;
+}
+
+@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
+  @if ($widthFrom == $containerWidth and $containerWidth == 0) {
+    $widthFrom: $maxWidth;
+  }
+  @if ($minSize <= 0) {
+    $minSize: 0.0001;
+  }
+  @if ($startSize <= 0) {
+    $startSize: 0.0001;
+  }
+
+  // Брейк-поинты в EM
+  $widthFromMedia: em($widthFrom);
+  $widthToMedia: em($widthTo);
+
+  // Формула плавающего значения
+  // Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+  $slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+  $yIntersection: -$widthTo * $slope + $minSize;
+  $flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
+
+  // Получение значения свойства
+  $propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
+  // Если отрицательные значения
+  @if ($minSize > $startSize) {
+    $propertyValue: #{"clamp(" rem($startSize) "," $flyValue "," rem($minSize) ")"};
+  }
+
+  @if $widthFrom == $containerWidth or $widthFrom == $maxWidth or $keepSize == 1 or $keepSize == 2 {
+    @media (min-width: $widthFromMedia) {
+      #{$property}: rem($startSize);
+    }
+  }
+  @media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+    #{$property}: $propertyValue;
+  }
+  @if $widthTo == $minWidth or $keepSize == 1 or $keepSize == 3 {
+    @media (max-width: $widthToMedia) {
+      #{$property}: rem($minSize);
+    }
+  }
+}
+
+@mixin hide-scroll {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0px;
+  }
+}
+
+@mixin scroll {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-red);
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-red);
+  }
+}
+
+@mixin first {
+  &:nth-child(1) {
+    @content;
+  }
+}
+
+@mixin last {
+  &:nth-last-child(1) {
+    @content;
+  }
+}
+
+@mixin not-last {
+  &:not(&:nth-last-child(1)) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      outline: none;
+      @content;
+    }
+  }
+}
+
+@mixin active {
+  &:active {
+    @content;
+  }
+}
+
+@mixin before {
+  &:before {
+    content: "";
+    @content;
+  }
+}
+
+@mixin after {
+  &:after {
+    content: "";
+    @content;
+  }
+}
+
+@mixin visually-hidden {
+  @extend %visually-hidden;
+}
+
+@mixin v-h {
+  @extend %visually-hidden;
+}

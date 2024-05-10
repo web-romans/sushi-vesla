@@ -1,0 +1,24 @@
+{
+  "bgimage": {
+    "scope": "scss",
+    "prefix": "bg-i",
+    "body": [
+      "background-image: url(\"@img\");",
+      "background-repeat: no-repeat;",
+      "background-position:  center center;",
+      "background-size: contain;"
+    ],
+    "description": "Snippet for use background-image"
+  },
+  "msimage": {
+    "scope": "scss",
+    "prefix": "ms-i",
+    "body": [
+      "mask-image: url(\"@img\");",
+      "mask-repeat: no-repeat;",
+      "mask-position:  center center;",
+      "mask-size: contain;"
+    ],
+    "description": "Snippet for use mask-image"
+  }
+}

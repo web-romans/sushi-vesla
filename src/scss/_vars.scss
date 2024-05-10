@@ -1,0 +1,13 @@
+:root {
+  // base
+  --font-family: "Montserrat", sans-serif;
+  --container-width: calc(100vw - 3.125vw * 2);
+  --container-offset: 3.125vw;
+
+  // colors
+  --color-bg: #f8f9fc;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #e31e24;
+  --color-primary-hover: #7e090c;
+}

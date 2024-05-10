@@ -1,0 +1,177 @@
+%flex {
+  display: flex;
+}
+
+%inline-flex {
+  display: inline-flex;
+}
+
+%flex-align-center {
+  align-items: center;
+}
+
+%flex-align-start {
+  align-items: flex-start;
+}
+
+%flex-align-stretch {
+  align-items: stretch;
+}
+
+%flex-align-end {
+  align-items: flex-end;
+}
+
+%flex-justify-end {
+  justify-content: flex-end;
+}
+
+%flex-justify-between {
+  justify-content: space-between;
+}
+
+%flex-justify-center {
+  justify-content: center;
+}
+
+%flex-justify-start {
+  justify-content: flex-start;
+}
+
+%flex-v-center {
+  @extend %flex;
+  @extend %flex-align-center;
+}
+
+%flex-h-center {
+  @extend %flex;
+  @extend %flex-justify-center;
+}
+
+%flex-all-center {
+  @extend %flex;
+  @extend %flex-align-center;
+  @extend %flex-justify-center;
+}
+
+%flex-all-between {
+  @extend %flex;
+  @extend %flex-align-center;
+  @extend %flex-justify-between;
+}
+
+%flex-stretch-between {
+  @extend %flex;
+  @extend %flex-align-stretch;
+  @extend %flex-justify-between;
+}
+
+%flex-center-end {
+  @extend %flex;
+  @extend %flex-align-center;
+  @extend %flex-justify-end;
+}
+
+%flex-center-start {
+  @extend %flex;
+  @extend %flex-align-center;
+  @extend %flex-justify-start;
+}
+
+%flex-center-between {
+  @extend %flex;
+  @extend %flex-align-center;
+  @extend %flex-justify-between;
+}
+
+%flex-start-between {
+  @extend %flex;
+  @extend %flex-align-start;
+  @extend %flex-justify-between;
+}
+
+%flex-start-center {
+  @extend %flex;
+  @extend %flex-align-start;
+  @extend %flex-justify-center;
+}
+
+%flex-column {
+  flex-direction: column;
+}
+
+%flex-row {
+  flex-direction: row;
+}
+
+%flex-wrap {
+  flex-wrap: wrap;
+}
+
+%flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+%dis-link {
+  pointer-events: none;
+  cursor: default;
+}
+
+%btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+%list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+%visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+%text-decoration-none {
+  text-decoration: none;
+}
+
+%cover-img {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+%content-img {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: content;
+  }
+}

@@ -1,0 +1,20 @@
+@import "./vendor/reset";
+@import "placeholders";
+@import "mixins";
+@import "fonts";
+@import "vars";
+@import "settings";
+@import "typography";
+@import "btns";
+
+@import "./components/header";
+@import "./components/section";
+@import "./components/show-hide";
+@import "./components/categories";
+@import "./components/products";
+@import "./components/product-item";
+@import "./components/product-count";
+@import "./components/burger";
+@import "./components/footer";
+
+//@import "../../node_modules/swiper/swiper-bundle";

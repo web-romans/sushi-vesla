@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('html/head.html', {
+"title": "Новый сайт"
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('html/header.html')
+    <main class="main">
+      <div class="main__content">
+        <div class="main__hero">
+          <picture>
+            <source srcset="@img/content/main/hero.webp" type="image/webp">
+            <img class="image" src="@img/content/main/hero.jpg" width="1410" height="300" alt="СВетлые БУДНИ с понедельника по четверг большие сеты по приятным ценам" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <section class="section">
+          <div class="section__header">
+            <h2 class="section-title">Наши категории</h2>
+            <button class="show-hide">Посмотреть все</button>
+          </div>
+          <ul class="categories _hide">
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat1.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat1.png" width="100" height="100" alt="Обеденное меню">
+                  </picture>
+                </div>
+                <div class="categories__name">Обеденное меню</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat2.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat2.png" width="100" height="100" alt="Hot Box WOK">
+                  </picture>
+                </div>
+                <div class="categories__name">Hot Box WOK</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat3.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat3.png" width="100" height="100" alt="Cool Box WOK">
+                  </picture>
+                </div>
+                <div class="categories__name">Cool Box WOK</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat4.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat4.png" width="100" height="100" alt="Супы WOK">
+                  </picture>
+                </div>
+                <div class="categories__name">Супы WOK</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat5.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat5.png" width="100" height="100" alt="Маки">
+                  </picture>
+                </div>
+                <div class="categories__name">Маки</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat6.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat6.png" width="100" height="100" alt="Ура Маки">
+                  </picture>
+                </div>
+                <div class="categories__name">Ура Маки</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat7.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat7.png" width="100" height="100" alt="Футо Маки">
+                  </picture>
+                </div>
+                <div class="categories__name">Футо Маки</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat8.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat8.png" width="100" height="100" alt="Гунканы">
+                  </picture>
+                </div>
+                <div class="categories__name">Гунканы</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat9.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat9.png" width="100" height="100" alt="Нигири">
+                  </picture>
+                </div>
+                <div class="categories__name">Нигири</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat10.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat10.png" width="100" height="100" alt="СушиРрито">
+                  </picture>
+                </div>
+                <div class="categories__name">СушиРрито</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat11.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat11.png" width="100" height="100" alt="Сеты">
+                  </picture>
+                </div>
+                <div class="categories__name">Сеты</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat12.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat12.png" width="100" height="100" alt="Супы">
+                  </picture>
+                </div>
+                <div class="categories__name">Супы</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat13.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat13.png" width="100" height="100" alt="Салаты">
+                  </picture>
+                </div>
+                <div class="categories__name">Салаты</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat14.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat14.png" width="100" height="100" alt="Десерты">
+                  </picture>
+                </div>
+                <div class="categories__name">Десерты</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat15.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat15.png" width="100" height="100" alt="Напитки">
+                  </picture>
+                </div>
+                <div class="categories__name">Напитки</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat16.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat16.png" width="100" height="100" alt="Соусы">
+                  </picture>
+                </div>
+                <div class="categories__name">Соусы</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories__item">
+                <div class="categories__img">
+                  <picture>
+                    <source srcset="@img/content/categories/cat17.webp" type="image/webp">
+                    <img class="image" src="@img/content/categories/cat17.png" width="100" height="100" alt="Сертификаты">
+                  </picture>
+                </div>
+                <div class="categories__name">Сертификаты</div>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="section">
+          <div class="section__header">
+            <h2 class="section-title">Раздел подкаталога</h2>
+          </div>
+          <ul class="products">
+            <li>
+              <article class="product-item">
+                <div class="product-item__img">
+                  <picture>
+                    <source srcset="@img/content/products/product1.webp" type="image/webp">
+                    <img class="image" src="@img/content/products/product1.png" width="180" height="180" alt="Нигири с тунцом опаленным" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <h3 class="product-item__title">Нигири с тунцом опаленным</h3>
+
+                <div class="product-item__footer">
+                  <div class="product-item__price">
+                    <div class="product-item__price-item"><span>2.9</span> руб. за 1 порцию (1шт)</div>
+                  </div>
+                  <div class="product-item__count">
+                    <div class="product-count">
+                      <button class="product-count__btn _minus" disabled><span>-</span></button>
+                      <input type="text" class="product-count__input _default" value="1" readonly>
+                      <button class="product-count__btn _plus"><span>+</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="product-item__add">В корзину</button>
+
+              </article>
+            </li>
+            <li>
+              <article class="product-item">
+                <div class="product-item__img">
+                  <picture>
+                    <source srcset="@img/content/products/product2.webp" type="image/webp">
+                    <img class="image" src="@img/content/products/product2.png" width="180" height="180" alt="Спайси текка маки" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <h3 class="product-item__title">Спайси текка маки</h3>
+
+                <div class="product-item__footer">
+                  <div class="product-item__price">
+                    <div class="product-item__price-item"><span>5.60</span> руб. за 1 порцию (8шт)</div>
+                    <div class="product-item__price-item"><span>3.10</span> руб. за 1/2 порцию (4шт)</div>
+                  </div>
+                  <div class="product-item__count">
+                    <div class="product-count">
+                      <button class="product-count__btn _minus" disabled><span>-</span></button>
+                      <input type="text" class="product-count__input _default" value="1" readonly>
+                      <button class="product-count__btn _plus"><span>+</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="product-item__add">В корзину</button>
+
+              </article>
+            </li>
+            <li>
+              <article class="product-item">
+                <div class="product-item__img">
+                  <picture>
+                    <source srcset="@img/content/products/product3.webp" type="image/webp">
+                    <img class="image" src="@img/content/products/product3.png" width="180" height="180" alt="Корпоративный переполох на 22 человек" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <h3 class="product-item__title">Корпоративный переполох на 22 человек</h3>
+
+                <div class="product-item__footer">
+                  <div class="product-item__price">
+                    <div class="product-item__price-item"><span>255.00</span> руб. за 1 порцию (1шт)</div>
+                  </div>
+                  <div class="product-item__count">
+                    <div class="product-count">
+                      <button class="product-count__btn _minus" disabled><span>-</span></button>
+                      <input type="text" class="product-count__input _default" value="1" readonly>
+                      <button class="product-count__btn _plus"><span>+</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="product-item__add">В корзину</button>
+
+              </article>
+            </li>
+            <li>
+              <article class="product-item">
+                <div class="product-item__img">
+                  <picture>
+                    <source srcset="@img/content/products/product-blank.webp" type="image/webp">
+                    <img class="image" src="@img/content/products/product-blank.png" width="180" height="180" alt="Нигири с тунцом маринованным" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <h3 class="product-item__title">Нигири с тунцом маринованным</h3>
+
+                <div class="product-item__footer">
+                  <div class="product-item__price">
+                    <div class="product-item__price-item"><span>2.90</span> руб. за 1 порцию (1шт)</div>
+                  </div>
+                  <div class="product-item__count">
+                    <div class="product-count">
+                      <button class="product-count__btn _minus" disabled><span>-</span></button>
+                      <input type="text" class="product-count__input _default" value="1" readonly>
+                      <button class="product-count__btn _plus"><span>+</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="product-item__add">В корзину</button>
+
+              </article>
+            </li>
+            <li>
+              <article class="product-item">
+                <div class="product-item__img">
+                  <picture>
+                    <source srcset="@img/content/products/product1.webp" type="image/webp">
+                    <img class="image" src="@img/content/products/product1.png" width="180" height="180" alt="Нигири с тунцом опаленным" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <h3 class="product-item__title">Нигири с тунцом опаленным</h3>
+
+                <div class="product-item__footer">
+                  <div class="product-item__price">
+                    <div class="product-item__price-item"><span>2.9</span> руб. за 1 порцию (1шт)</div>
+                  </div>
+                  <div class="product-item__count">
+                    <div class="product-count">
+                      <button class="product-count__btn _minus" disabled><span>-</span></button>
+                      <input type="text" class="product-count__input _default" value="1" readonly>
+                      <button class="product-count__btn _plus"><span>+</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="product-item__add">В корзину</button>
+
+              </article>
+            </li>
+            <li>
+              <article class="product-item">
+                <div class="product-item__img">
+                  <picture>
+                    <source srcset="@img/content/products/product2.webp" type="image/webp">
+                    <img class="image" src="@img/content/products/product2.png" width="180" height="180" alt="Спайси текка маки" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <h3 class="product-item__title">Спайси текка маки</h3>
+
+                <div class="product-item__footer">
+                  <div class="product-item__price">
+                    <div class="product-item__price-item"><span>5.60</span> руб. за 1 порцию (8шт)</div>
+                    <div class="product-item__price-item"><span>3.10</span> руб. за 1/2 порцию (4шт)</div>
+                  </div>
+                  <div class="product-item__count">
+                    <div class="product-count">
+                      <button class="product-count__btn _minus" disabled><span>-</span></button>
+                      <input type="text" class="product-count__input _default" value="1" readonly>
+                      <button class="product-count__btn _plus"><span>+</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="product-item__add">В корзину</button>
+
+              </article>
+            </li>
+            <li>
+              <article class="product-item">
+                <div class="product-item__img">
+                  <picture>
+                    <source srcset="@img/content/products/product3.webp" type="image/webp">
+                    <img class="image" src="@img/content/products/product3.png" width="180" height="180" alt="Корпоративный переполох на 22 человек" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <h3 class="product-item__title">Корпоративный переполох на 22 человек</h3>
+
+                <div class="product-item__footer">
+                  <div class="product-item__price">
+                    <div class="product-item__price-item"><span>255.00</span> руб. за 1 порцию (1шт)</div>
+                  </div>
+                  <div class="product-item__count">
+                    <div class="product-count">
+                      <button class="product-count__btn _minus" disabled><span>-</span></button>
+                      <input type="text" class="product-count__input _default" value="1" readonly>
+                      <button class="product-count__btn _plus"><span>+</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="product-item__add">В корзину</button>
+
+              </article>
+            </li>
+            <li>
+              <article class="product-item">
+                <div class="product-item__img">
+                  <picture>
+                    <source srcset="@img/content/products/product-blank.webp" type="image/webp">
+                    <img class="image" src="@img/content/products/product-blank.png" width="180" height="180" alt="Нигири с тунцом маринованным" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+                <h3 class="product-item__title">Нигири с тунцом маринованным</h3>
+
+                <div class="product-item__footer">
+                  <div class="product-item__price">
+                    <div class="product-item__price-item"><span>2.90</span> руб. за 1 порцию (1шт)</div>
+                  </div>
+                  <div class="product-item__count">
+                    <div class="product-count">
+                      <button class="product-count__btn _minus" disabled><span>-</span></button>
+                      <input type="text" class="product-count__input _default" value="1" readonly>
+                      <button class="product-count__btn _plus"><span>+</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="product-item__add">В корзину</button>
+
+              </article>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="main__sidebar"></div>
+    </main>
+    @include('html/footer.html')
+  </div>
+</body>
+
+</html>

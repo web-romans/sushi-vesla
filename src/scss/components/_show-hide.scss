@@ -1,0 +1,27 @@
+.show-hide {
+  @include flex-center-end;
+  @include btn-reset;
+  @include text-decoration-none;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: vw(18px);
+  gap: vw(20px);
+  color: #000;
+  transition: color 0.25s ease;
+
+  @include hover {
+    color: var(--color-primary);
+  }
+
+  @include after {
+    flex-shrink: 0;
+    transform: translateY(2px);
+    width: vw(14px);
+    height: vw(18px);
+    background-color: currentColor;
+    mask-image: url("@img/icons/arrow-down.svg");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+  }
+}

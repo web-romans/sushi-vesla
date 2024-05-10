@@ -1,0 +1,19 @@
+.btn {
+  @include btn-reset;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: vw(18px);
+  border-radius: vw(10px);
+  padding: vw(14px);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  @include hover {
+    box-shadow:
+      3px 3px 10px 0 rgba(0, 0, 0, 0.15),
+      -3px -3px 5px 0 #f8f9fc;
+  }
+}

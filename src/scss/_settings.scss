@@ -1,0 +1,97 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline-color: var(--color-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family), sans-serif;
+  font-weight: 400;
+  -webkit-text-size-adjust: 100%;
+  overflow: visible;
+  position: relative;
+  height: 100%;
+  font-size: 16px;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  height: 100%;
+}
+
+.site-container {
+  @extend %flex;
+  @extend %flex-column;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--color-bg);
+}
+
+.main {
+  @include flex-stretch-between;
+  @extend .container;
+  gap: vw(30px);
+  flex: 1 1 auto;
+  padding: vw(20px) 0 vw(120px);
+
+  &__hero {
+    width: 100%;
+    height: vw(300px);
+    border-radius: vw(20px);
+    overflow: hidden;
+    @extend %cover-img;
+  }
+
+  &__content {
+    @include flex;
+    @include flex-column;
+    gap: vw(40px);
+  }
+
+  &__sidebar {
+    width: vw(360px);
+    flex-shrink: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  //padding: 0 var(--container-offset);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.scroll-content {
+  @include scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

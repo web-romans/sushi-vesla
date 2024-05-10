@@ -1,0 +1,10 @@
+.section {
+  @include flex;
+  @include flex-column;
+  gap: vw(20px);
+
+  &__header {
+    @include flex-center-between;
+    gap: vw(20px);
+  }
+}
