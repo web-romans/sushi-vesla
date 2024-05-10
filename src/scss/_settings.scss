@@ -60,6 +60,7 @@ html {
   &__sidebar {
     width: vw(360px);
     flex-shrink: 0;
+    position: relative;
   }
 }
 

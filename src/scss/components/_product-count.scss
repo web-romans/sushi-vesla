@@ -7,7 +7,7 @@
     font-family: var(--font-family);
     font-weight: 600;
     font-size: vw(24px);
-    line-height: vw(40px);
+    line-height: 1;
     text-align: center;
     width: vw(40px);
     height: vw(40px);
@@ -17,6 +17,9 @@
       3px 3px 10px 0 rgba(0, 0, 0, 0.15),
       -3px -3px 5px 0 #f8f9fc;
     position: relative;
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease;
 
     span {
       position: relative;
@@ -34,6 +37,7 @@
       transform: translate(-50%, -50%);
       border-radius: 50%;
       border: vw(4px) solid var(--color-white);
+      transition: border-color 0.4s ease;
     }
 
     &._minus {
@@ -41,6 +45,13 @@
 
       &::before {
         border-color: var(--color-primary);
+      }
+
+      @include hover {
+        color: var(--color-primary-hover);
+        &::before {
+          border-color: var(--color-primary-hover);
+        }
       }
     }
 
@@ -51,7 +62,15 @@
         background-color: var(--color-primary);
         border-color: var(--color-primary);
       }
+
+      @include hover {
+        &::before {
+          background-color: var(--color-primary-hover);
+          border-color: var(--color-primary-hover);
+        }
+      }
     }
+
     &:disabled {
       pointer-events: none;
       color: rgba(#000, 0.25);
@@ -65,6 +84,7 @@
 
   &__input {
     @include input-reset;
+    background-color: transparent;
     width: vw(50px);
     height: vw(40px);
     flex-shrink: 0;
